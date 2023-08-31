@@ -369,97 +369,21 @@
 -  **Conclusion** <br>
 
      
-    - Models For me I didn't  find a huge difference in performance between Models when responding
+After researching we found that the main factor is the ( limited size of context window for the selected model ) 
+and we got equation to exlain our Conclusion  
 
-      and the both of Models act well and the influenced difference is limitation of window size.
-
-    - English Prompt is better than Arabic Prompt as the Arabic is require more tokens size.
-
-    - When to Use Only Prompt? (Opinion)
-
-      It's a critical as it is depending on many factors (language,model,..eg)
-
-      but depending on what i said i this report and my experience with Komandaz
-
-      * We can use only prompt the we have maximum 10 main leafs in our [Scenario]
-
-        as every main point  question can contain many sub questions for tha to make prompt 
-
-        have all details i think 10 main points for GPT 3.5-turbo and we can extreme this 
-
-        number for GPT 4-8k  to 15.
-
-
-    - When to Use Context with Prompt?
-
-      Back to Previous answer we can use context when we have more 
-
-      than 10 questions in Gpt3.5 -turpo, more that 15 main leafs in Gpt 4 -8k.
-
+tokens in memory  =   Prompt Template + Conversation   <br>                
+        - Prompt Template : All tokens on the data <br>
+        - Conversation : longest node in every path <br>
 
  
-
-      
-
-
-
+tokens in memory < context window   --->  Prompt Only<br>
+tokens in memory > context window   ---> Prompt with Context
  
 
- 
-
----------------------------------------------------------------------
-
- 
-
-- Insights 
-
-    Untill now we see that we have 2 factors (Complexity of Conversation, length of Prompt) 
-
-
-    - Length Of Prompt depending on which language for example ( in  GPT3 it accepted 12k char of English Prompt
-
-      but didn't accept 9k from arabic Prompt but in GPT4 it accepted both)
-
- 
-
----
-
-   - Compexity 
-
-        - if we have a not simple structure and sipmle data in this case we can use the prompt only if the prompt 
-
-          will not exeed the allowed number of tokens of our model.
-
-           ![](https://firebasestorage.googleapis.com/v0/b/menialwyschool.appspot.com/o/6.png?alt=media&token=288120a3-0465-4615-ad1b-ee58e00ea783)
-
-        - if our data is complex but with a  simple structure in this case we will use Prompt with context.
-
-            ![](https://firebasestorage.googleapis.com/v0/b/menialwyschool.appspot.com/o/5.png?alt=media&token=cf1f259e-3afd-4df9-95f0-51ee71c232ba)
-
-        - if our simple data  and complex structure we will use only prompt. 
-
-            ![](https://firebasestorage.googleapis.com/v0/b/menialwyschool.appspot.com/o/4.png?alt=media&token=d920fb4e-318c-48cc-b48e-e7414a5c515d)
-
-        - if our data huge and strucutre complex we will use Prompt with Context.
-
-             ![](https://firebasestorage.googleapis.com/v0/b/menialwyschool.appspot.com/o/2.png?alt=media&token=792b8f8e-cf29-4bc2-b525-c456e253fab0)
-
-
----
-
-  The best results we will get Prompt with Context but it will be more cost and more time     
-
- 
-
-        and choosing the model will depend also on size of data and the cost needed
-
- 
-
-        as in some cases we can use GPT3 but GPT4 will give a better results 
-
-        but GPT3 is still suitable   
-
- 
+ ![](https://firebasestorage.googleapis.com/v0/b/menialwyschool.appspot.com/o/longest_path%26max_tokens.png?alt=media&token=e6cf68d5-c4f2-4774-a9cf-102e31623d19)<br>
+- Arrows refer to longest Path <br> 
+- red containers refer to nodes contains maximum tokens in every layer <br>
 
 ----
 
@@ -474,3 +398,10 @@ Why to use a AI Bot? <br>
  
 
 ![](https://firebasestorage.googleapis.com/v0/b/menialwyschool.appspot.com/o/11.png?alt=media&token=799a334a-f38f-4691-a705-4a1ccf14bb7d)
+
+
+
+---
+
+
+
