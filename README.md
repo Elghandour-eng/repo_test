@@ -368,6 +368,9 @@
 
 -  **Conclusion** <br>
 
+
+    - Levels * Average Size of Nodes + Last Token 
+     
     - Models For me I didn't  find a huge difference in performance between Models when responding
 
       and the both of Models act well and the influenced difference is limitation of window size.
